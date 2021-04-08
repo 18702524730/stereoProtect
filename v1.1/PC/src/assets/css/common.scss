@@ -1,0 +1,108 @@
+/*-- 公用样式  --*/
+.fll, .fl{
+	float: left;
+}
+.flr, .fr{
+	float: right;
+}
+.clearfix:after{
+	display:block;
+	content:'';
+	clear:both;
+}
+.lc{text-align: center;}
+.ll{text-align: left;}
+.lr{text-align: right;}
+.ml-5,.ml5{margin-left: 5px;}
+.ml-10,.ml10{margin-left: 10px;}
+.ml-15,.ml15{margin-left: 15px;}
+.ml-20,.ml20{margin-left: 20px;}
+.ml-25,.ml25{margin-left: 25px;}
+.ml-30,.ml30{margin-left: 30px;}
+.ml-35,.ml35{margin-left: 35px;}
+.ml-40,.ml40{margin-left: 40px;}
+.ml-50,.ml50{margin-left: 50px;}
+
+.mt-5,.mt5{margin-top: 5px;}
+.mt-10,.mt10{margin-top: 10px;}
+.mt-15,.mt15{margin-top: 15px;}
+.mt-20,.mt20{margin-top: 20px;}
+.mt-25,.mt25{margin-top: 25px;}
+.mt-30,.mt30{margin-top: 30px;}
+.mt-35,.mt35{margin-top: 35px;}
+.mt-40,.mt40{margin-top: 40px;}
+.mt-50,.mt50{margin-top: 50px;}
+
+.mr-5,.mr5{margin-right: 5px;}
+.mr-10,.mr10{margin-right: 10px;}
+.mr-15,.mr15{margin-right: 15px;}
+.mr-20,.mr20{margin-right: 20px;}
+.mr-25,.mr25{margin-right: 25px;}
+.mr-30,.mr30{margin-right: 30px;}
+.mr-35,.mr35{margin-right: 35px;}
+.mr-40,.mr40{margin-right: 40px;}
+.mr-50,.mr50{margin-right: 50px;}
+
+.mb-5,.mb5{margin-bottom: 5px;}
+.mb-10,.mb10{margin-bottom: 10px;}
+.mb-15,.mb15{margin-bottom: 15px;}
+.mb-20,.mb20{margin-bottom: 20px;}
+.mb-25,.mb25{margin-bottom: 25px;}
+.mb-30,.mb30{margin-bottom: 30px;}
+.mb-35,.mb35{margin-bottom: 35px;}
+.mb-40,.mb40{margin-bottom: 40px;}
+.mb-50,.mb50{margin-bottom: 50px;}
+
+.hidden{display: none;}
+.commWidth{width: 1280px;margin-left: auto;margin-right: auto;position: relative;}
+body{background-color: #eaecf1;min-width: 1280px;}
+p {margin: 0;}
+
+
+/*输入框公共样式*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color:    #999;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+	color:    #999;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+	color:    #999;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+	color:    #999;
+}
+
+// 过渡效果，更多的直接引用element-ui中的，若没有，在这儿添加
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active 在低于版本 2.1.8 中 */ {
+  opacity: 0;
+}
+
+.highcharts-credits{display:none;}
+
+// 列表页样式
+.ant-table-thead > tr.ant-table-row-hover > td, .ant-table-tbody > tr.ant-table-row-hover > td, .ant-table-thead > tr:hover > td, .ant-table-tbody > tr:hover > td{background: #f1f6ff;}
+.ant-table-tbody > tr > td,.ant-table-thead > tr > th{border-bottom: 1px solid #f1f1f1;}
+.ant-input{height: 30px;line-height: 20px;font-size: 13px;border: 1px solid #F1F1F1;border-radius: 2px;}
+.ant-select{height: 30px;line-height: 20px;font-size: 13px;}
+.ant-select-selection--single{height: 30px;border-color: #F1F1F1;border-radius: 2px;}
+.ant-select-selection__rendered{line-height: 28px;}
+.ant-btn{border-radius: 2px; height: 30px;}
+.ant-btn-primary{
+    color: #fff;
+    background-color: #3576FF;
+    border-color: #3576FF;
+}
+.ant-btn-default{
+	border-color: #3576FF;
+	color: #3576FF;
+}
+a{color: #3576FF;}
+.ant-pagination-prev, .ant-pagination-next, .ant-pagination-jump-prev, .ant-pagination-jump-next{border-radius: 2px;}
+.ant-pagination-item, .ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link{border-radius: 2px;}
+
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=fxtL0qV3uPn0rda9C3Ze6nnz8yDPzab7"></script>
+    <script>
+      (function (designWidth, maxWidth) {
+        var doc = document,
+            win = window;
+        var docEl = doc.documentElement || doc.body;
+        var tid;
+        var rootItem, rootStyle;
+        
+        
+        function refreshRem() {
+            var width = docEl.getBoundingClientRect().width;
+            if (!maxWidth) {
+                maxWidth = 1024;
+            }
+            ;
+            if (width > maxWidth) {
+                width = maxWidth;
+            }
+            if (width < 320) {
+                width = 320;
+            }
+            //与淘宝做法不同，直接采用简单的rem换算方法1rem=100px
+            var rem = width * 100 / designWidth;
+            //兼容UC开始
+            rootStyle = "html{font-size:" + rem + 'px !important}';
+            rootItem = document.getElementById('rootsize') || document.createElement("style");
+            if (!document.getElementById('rootsize')) {
+                document.getElementsByTagName("head")[0].appendChild(rootItem);
+                rootItem.id = 'rootsize';
+            }
+            if (rootItem.styleSheet) {
+                rootItem.styleSheet.disabled || (rootItem.styleSheet.cssText = rootStyle)
+            } else {
+                try {
+                    rootItem.innerHTML = rootStyle
+                } catch (f) {
+                    rootItem.innerText = rootStyle
+                }
+            }
+            //兼容UC结束
+            docEl.style.fontSize = rem + "px";
+        };
+        refreshRem();
+
+        win.addEventListener("resize", function () {
+            clearTimeout(tid); //防止执行两次
+            tid = setTimeout(refreshRem, 300);
+        }, false);
+        if (doc.readyState === "complete") {
+            doc.body.style.fontSize = "16px";
+        } else {
+            doc.addEventListener("DOMContentLoaded", function (e) {
+                doc.body.style.fontSize = "16px";
+            }, false);
+        }
+    })(750, 750);
+    
+    let url = window.location.href;
+    if(url.indexOf('source')!=-1){
+        let source = url.split('source=')[1];
+        localStorage.clear();
+        localStorage.setItem('source',source);
+        function union() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e354dfc58bd890d609dd26bee16f783f";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            console.log(source)
+        }
+
+        function sebe() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?5db13e8e5b5e3a766c15a754ceb0ed05";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            console.log(source)
+        }
+
+        function obse() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7baac40bb3bd1c616f6eb33ee0ce98e9";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            console.log(source)
+        }
+        if(source==2){
+            union()
+        }
+        if(source==3){
+            sebe()
+        }
+        if(source==4){
+            obse()
+        }
+    }
+    // 知识产权快速维权平台
+    </script>
+    <title>防伪信息存证平台</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but hello-world doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      
+    </div>
+  </body>
+</html>
